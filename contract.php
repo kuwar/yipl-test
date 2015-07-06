@@ -17,6 +17,9 @@ $combined_data = $award_importer->combine_array($data_contracts, $data_awarded);
 // count total amount of closed contract
 $closed_contract_amount = $award_importer->sum_closed_amount($combined_data);
 
+// generating final.csv file.
+$award_importer->array_to_csv_download($combined_data);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +32,14 @@ $closed_contract_amount = $award_importer->sum_closed_amount($combined_data);
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">	
 
 	<script type="text/javascript">
-        function startDownload() {
+        /*function startDownload() {
             // window.location = "/download.php?data=<?php echo serialize($combined_data); ?>";
             setTimeout(function(){ window.location = "/yipl-test/download.php"; }, 3000);
-        }
+        }*/
     </script>
 
 </head>
-<body onload="startDownload();" >
+<body onload="" >
 
 <div class="row">
 	<div class="page-header">

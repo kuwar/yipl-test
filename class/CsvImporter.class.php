@@ -101,10 +101,11 @@ class CsvImporter {
     // -------------------------------------------------------------------------------------------
     function array_to_csv_download($array, $filename = "final.csv", $delimiter=",") {
 
-        header('Content-Type: application/csv');
-        header('Content-Disposition: attachment; filename="'.$filename.'";');
+        // header('Content-Type: application/csv');
+        // header('Content-Disposition: attachment; filename="'.$filename.'";');
 
-        $f = fopen('php://output', 'w');
+        // $f = fopen('php://output', 'w');
+        $f = fopen($_SERVER['DOCUMENT_ROOT'] . "/yipl-test/uploads/final.csv","wb");
 
         $header_array = array(
             'contractName,status,bidPurchaseDeadline,bidSubmissionDeadline,bidOpeningDate,tenderid,publicationDate,publishedIn,contractDate,completionDate,awardee,awardeeLocation,Amount,latlng'

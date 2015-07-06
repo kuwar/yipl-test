@@ -14,5 +14,5 @@ $data_awarded = $award_importer->put_latlng($data_awards);
 $combined_data = $award_importer->combine_array($data_contracts, $data_awarded);
 // print_r($combined_data);
 
-// exporting to csv file
+// exporting to csv file ie generate csv file from the two csv file
 $award_importer->array_to_csv_download($combined_data);
