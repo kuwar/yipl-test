@@ -13,6 +13,6 @@ Browse base_url/contracts.php (ie. yipl-test/contracts.php). final.csv file will
 Browse to base_url/index.php (ie. yipl-test/index.php) and will get details view of contracts along with google map.
 
 # Dependencies
-latest version of jQuery
-latest version of bootstrap
+latest version of jQuery,
+latest version of bootstrap,
 google map api
