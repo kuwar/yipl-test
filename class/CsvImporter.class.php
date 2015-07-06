@@ -2,22 +2,18 @@
 class CsvImporter {
 
     private $fp;
-    private $parse_header;
     private $header;
     private $delimiter;
     private $length;
 
     //--------------------------------------------------------------------
-    function __construct($file_name, $parse_header = true, $delimiter = "\t", $length = 8000){
+    function __construct($file_name, $delimiter = "\t", $length = 8000){
         $this->fp = fopen($file_name, "r");
-        $this->parse_header = $parse_header;
         $this->delimiter = $delimiter;
         $this->length = $length;
 
-        if ( $this->parse_header ) {
-           $this->header = fgetcsv($this->fp, $this->length, $this->delimiter);
-        }
-
+        $this->header = fgetcsv($this->fp, $this->length, $this->delimiter);
+        
     }
 
     //--------------------------------------------------------------------
@@ -28,6 +24,7 @@ class CsvImporter {
     }
 
     //--------------------------------------------------------------------
+    // get the array of csv data
     function get($max_lines = 0){
         //if $max_lines is set to 0, then get all the data
         $data = array();

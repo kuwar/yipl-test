@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contract Locations</title>
+    <title>Contract Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <!-- Bootstrap core CSS -->
